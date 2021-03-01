@@ -108,6 +108,5 @@ test('test sort 4',() => {
 
     const letters = ['c','a','z','e']
     passport(letters)
-    //первончальный массив не измениляс, так как мы работали с копией
     expect(letters).toEqual(['c','a','z','e'])
 })
