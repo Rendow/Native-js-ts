@@ -4,9 +4,9 @@ export type ManType = {
 }
 
 const people: Array<ManType> = [
-    {name: 'Andrey Ivanov', age: 33},
-    {name: 'Alexander Petrov', age: 24},
-    {name: 'Dmitry Sidorov', age: 18},
+    {name: 'Andrey Ivanov', hair: 33},
+    {name: 'Alexander Petrov', hair: 24},
+    {name: 'Dmitry Sidorov', hair: 18},
 ]
 
 function dimychTransformator(man: ManType) {

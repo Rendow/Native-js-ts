@@ -27,7 +27,7 @@ export type StudentType = {
 export const students: StudentType = {
     id:1,
     name:'olga',
-    age:32,
+    hair:32,
     isActive: false,
     address: {
        streetTitle: 'Surganova 2',

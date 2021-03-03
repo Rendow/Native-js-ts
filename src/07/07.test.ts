@@ -20,7 +20,7 @@ let props: ManType;
 beforeEach(() => {
     props = {
         name: 'ivan',
-        age: 32,
+        hair: 32,
         lessons: [{title: '1'}, {title: '2'}],
         address: {
             street: {
@@ -35,7 +35,7 @@ test('', () => {
 
     let props = {
         name: 'ivan',
-        age: 32,
+        hair: 32,
         lessons: [{title: '1'}, {title: '2'}],
         address: {
             street: {
@@ -53,7 +53,7 @@ test('', () => {
     // const title = props.address.street
     const {title} = props.address.street
 
-    const a = props.age
+    const a = props.hair
     const l = props.lessons
 
     expect(age).toBe(32)

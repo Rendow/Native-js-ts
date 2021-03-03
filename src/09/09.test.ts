@@ -1,7 +1,7 @@
 
 
 function increaseAge(user:UserType){
-    user.age++
+    user.hair++
 }
 type UserType = {
     name:string
@@ -11,14 +11,14 @@ type UserType = {
 test('test',() => {
     let user = {
         name: 'name',
-        age:32,
+        hair:32,
         address:{
             title:'minsk'
         }
     }
     let user2:UserType={
         name:'sdasd',
-        age:31,
+        hair:31,
         address:user.address
     }
     user2.address.title = 'sochy'
@@ -34,18 +34,18 @@ test('test',() => {
 test('test 2',() => {
     let user = [{
         name: 'name',
-        age: 32
+        hair: 32
     },
         {
             name: 'name',
-            age: 32
+            hair: 32
         }]
 
     let admin = user
     admin.push({name: 'dsd12', age: 21})
 
 
-    expect(user[2]).toEqual({name: 'dsd12', age: 21})
+    expect(user[2]).toEqual({name: 'dsd12', hair: 21})
 })
 
 
@@ -64,15 +64,15 @@ test('test 4',() => {
     }
     let user = {
         name: 'name',
-        age:32,
+        hair:32,
         address:address
     }
     let user2:UserType={
         name:'sdasd',
-        age:31,
+        hair:31,
         address:address
     }
-    const users = [user,user2,{name:'raw',age:4, address: address}]
+    const users = [user,user2,{name:'raw',hair:4, address: address}]
 
     const admins = [user,user2]
     admins[0].name ='vanya'

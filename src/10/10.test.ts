@@ -1,30 +1,41 @@
+import {makeHairStyle, moveUser, UserType, UserWithLaptop} from "./10-01";
 
-function increaseAge(user:UserType){
-    user.age++
-}
-type UserType = {
-    name:string
-    age:number
-    address:{title:string}
-}
-test('test',() => {
-    let user = {
+
+test('test hair',() => {
+    let user:UserType = {
         name: 'name',
-        age:32,
+        hair:32,
         address:{
-            title:'minsk'
+            city:'minsk'
         }
     }
-    let user2:UserType={
-        name:'sdasd',
-        age:31,
-        address:user.address
-    }
-    user2.address.title = 'sochy'
-    //в юзер 2 находится ссылка на адрес
-    //так как в обьекте используется тайтл из юзера, меняя тайтл с помощью юзера2, меняем тайтл и в юзере
 
-    expect(user.address).toBe(user2.address)
-    expect(user.address.title).toBe('sochy')
+    const cut = makeHairStyle(user,2)
+
+    expect(user.hair).toBe(32)
+    expect(cut.hair).toBe(16)
+
+})
+test('change address',() => {
+    let user:UserWithLaptop = {
+        name: 'name',
+        hair:32,
+        address:{
+            city:'minsk',
+            house:12
+        },
+        laptop:{
+            title:'asus'
+        }
+    }
+
+    const movedUser = moveUser(user,'kiev')
+
+
+    expect(user).not.toBe(movedUser)
+    expect(user.address).not.toBe(movedUser.address)
+
+    expect(user.laptop).toBe(movedUser.laptop)
+    expect(movedUser.address.city).toBe('kiev')
 
 })

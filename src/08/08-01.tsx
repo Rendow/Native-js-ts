@@ -1,6 +1,6 @@
 let user = {
     name:'oleg',
-    age:13,
+    hair:13,
     address: {
         city: {
             title: 'minsk'
